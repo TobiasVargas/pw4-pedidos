@@ -37,6 +37,9 @@ INSTALLED_APPS = [
     'django.contrib.sessions',
     'django.contrib.messages',
     'django.contrib.staticfiles',
+    'apps.clientes',
+    'apps.pedidos',
+    'apps.produtos',
 ]
 
 MIDDLEWARE = [
@@ -49,7 +52,7 @@ MIDDLEWARE = [
     'django.middleware.clickjacking.XFrameOptionsMiddleware',
 ]
 
-ROOT_URLCONF = 'pedidos.urls'
+ROOT_URLCONF = 'settings.urls'
 
 TEMPLATES = [
     {
@@ -67,7 +70,7 @@ TEMPLATES = [
     },
 ]
 
-WSGI_APPLICATION = 'pedidos.wsgi.application'
+WSGI_APPLICATION = 'settings.wsgi.application'
 
 
 # Database
