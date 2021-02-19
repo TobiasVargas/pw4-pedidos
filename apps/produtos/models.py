@@ -1,4 +1,5 @@
 from django.db import models
+from django.urls import reverse
 
 
 class Categoria(models.Model):
@@ -40,3 +41,12 @@ class Produto(models.Model):
 
     def __str__(self):
         return self.nome
+    
+    def get_absolute_url(self):
+	    return reverse("produto__detail", kwargs={"pk":self.pk})
+ 
+    def get_update_url(self):
+	    return reverse("produto__atualiza", kwargs={"pk":self.pk})
+ 
+    def get_delete_url(self):
+	    return reverse("produto__delete", kwargs={"pk":self.pk})
